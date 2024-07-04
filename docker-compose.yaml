@@ -18,6 +18,8 @@ services:
     build:
       context: .
       dockerfile: msprodutos/Dockerfile
+    ports:
+      - "8082:8082"
     environment:
       SPRING_PROFILES_ACTIVE: local  
       SPRING_MAIN_BANNER_MODE: off  
@@ -30,6 +32,8 @@ services:
     build:
       context: .
       dockerfile: mscarrinhos/Dockerfile
+    ports:
+      - "8083:8083"
     environment:
       SPRING_PROFILES_ACTIVE: docker
       SPRING_MAIN_BANNER_MODE: off 
@@ -42,6 +46,8 @@ services:
     build:
       context: .
       dockerfile: mspagamentos/Dockerfile
+    ports:
+      - "8081:8081"
     environment:
       SPRING_PROFILES_ACTIVE: docker   
       SPRING_MAIN_BANNER_MODE: off 
@@ -54,6 +60,8 @@ services:
     build:
       context: .
       dockerfile: mspedidos/Dockerfile
+    ports:
+      - "8084:8084"
     environment:
       SPRING_PROFILES_ACTIVE: docker,local   
       SPRING_MAIN_BANNER_MODE: off 
